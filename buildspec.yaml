@@ -22,4 +22,4 @@ artifacts:
   files:
     - "**/*"
   discard-paths: no
-  base-directory: personal-website
+  base-directory: dist/personal-website
