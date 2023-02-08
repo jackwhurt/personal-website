@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { startOfDay } from 'date-fns';
-import { CalendarEvent } from '../interfaces/calendar-event';
+import { CalendarEvent } from '../../interfaces/calendar-event';
 
 @Component({
   selector: 'app-calendar-event',

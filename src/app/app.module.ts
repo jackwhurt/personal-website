@@ -15,9 +15,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GymTrackerComponent } from './components/gym-tracker/gym-tracker.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { CalendarEventComponent } from './components/calendar-event/calendar-event.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, GymTrackerComponent, CalendarComponent, CalendarEventComponent],
+  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, GymTrackerComponent, CalendarComponent, CalendarEventComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     NgbModule,
