@@ -1,7 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
-import { CalendarEvent } from './components/interfaces/calendar-event';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
