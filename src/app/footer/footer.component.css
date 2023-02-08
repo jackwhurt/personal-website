@@ -1,0 +1,10 @@
+.padding {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
