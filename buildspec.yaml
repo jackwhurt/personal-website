@@ -7,13 +7,11 @@ phases:
     runtime-versions:
       nodejs: 16.x
     commands:
-      - echo install process started
       - npm install && npm install -g @angular/cli
   build:
     commands:
-      - echo build process started now
       - ng build --configuration=production
   post_build:
     commands:
       - cd dist/personal-website
-      - aws s3 sync . s3://jackwhurt-personal-website --delete
+      - aws s3 sync . s3://jackwhurt.com --delete
