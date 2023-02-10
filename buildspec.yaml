@@ -15,6 +15,5 @@ phases:
       - ng build --configuration=production
   post_build:
     commands:
-      - echo build process finished, we should uplload to S3 now
       - cd dist/personal-website
-      - ls -al
+      - aws s3 sync . s3://jackwhurt-personal-website --delete
