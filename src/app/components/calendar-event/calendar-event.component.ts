@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CalendarEvent } from 'angular-calendar';
 import { startOfDay } from 'date-fns';
-import { CalendarEvent } from '../../interfaces/calendar-event';
+import { CalendarEventService } from 'src/app/services/calendar-event.service';
 
 @Component({
   selector: 'app-calendar-event',
@@ -13,7 +14,7 @@ export class CalendarEventComponent {
 
   public calendarEvents: Array<CalendarEvent> = [];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private calendarEventService: CalendarEventService) {
     this.createForm = this.fb.group({
       start: ['', Validators.required],
       end: ['', Validators.required],
@@ -24,21 +25,5 @@ export class CalendarEventComponent {
       resizable: ['', Validators.required],
       draggable: ['', Validators.required],
     });
-  }
-
-  public onCreate(calendarEvent: CalendarEvent) {
-    
-  }
-
-  public onCreateLoad() {
-    const calEvent1: CalendarEvent = {
-      id: '',
-      start: startOfDay(new Date()).toString(),
-      title: 'Louis',
-      colour: 'Blue',
-      allDay: true,
-      draggable: false,
-    }
-    this.onCreate(calEvent1);
   }
 }
