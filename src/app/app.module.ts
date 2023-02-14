@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
@@ -14,16 +15,26 @@ import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GymTrackerComponent } from './components/gym-tracker/gym-tracker.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
-import { CalendarEventComponent } from './components/calendar-event/calendar-event.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, HomeComponent, FooterComponent, GymTrackerComponent, CalendarComponent, CalendarEventComponent, NotFoundComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    FooterComponent,
+    GymTrackerComponent,
+    CalendarComponent,
+    NotFoundComponent
+  ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     NgbModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
     FlatpickrModule.forRoot(),
     CalendarModule.forRoot({
