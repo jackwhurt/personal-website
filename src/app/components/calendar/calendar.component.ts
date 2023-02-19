@@ -1,10 +1,10 @@
 import { Component, ChangeDetectionStrategy, ViewChild, TemplateRef, OnInit } from '@angular/core';
-import { isSameDay, isSameMonth, } from 'date-fns';
+import { isSameDay, isSameMonth, startOfDay, subDays, } from 'date-fns';
 import { Subject } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarEvent, CalendarEventTimesChangedEvent, CalendarView } from 'angular-calendar';
 import { CalendarEventService } from 'src/app/services/calendar-event.service';
-
+import { EventColor } from 'calendar-utils';
 // TODO: Delete
 // const colors: Record<string, EventColor> = {
 //   red: {
@@ -28,21 +28,17 @@ import { CalendarEventService } from 'src/app/services/calendar-event.service';
 //     secondary: '#17b814',
 //   },
 // };
-// events: CalendarEvent[] = [
-//   {
-//     start: subDays(startOfDay(new Date()), 1),
-//     end: addDays(new Date(), 1),
-//     title: 'A 3 day event',
-//     color: { ...colors['red'] },
-//     actions: this.actions,
-//     allDay: true,
-//     resizable: {
-//       beforeStart: true,
-//       afterEnd: true,
-//     },
-//     draggable: true,
-//   }
-// ];
+// const event2: CalendarEvent = {
+//   start: subDays(startOfDay(new Date()), 1),
+//   title: 'A 3 day event',
+//   color: { ...colors['red'] },
+//   allDay: true,
+//   resizable: {
+//     beforeStart: true,
+//     afterEnd: true,
+//   },
+//   draggable: true,
+// };
 
 @Component({
   selector: 'app-calendar',
