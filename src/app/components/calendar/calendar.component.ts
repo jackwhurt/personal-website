@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, ViewChild, TemplateRef, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, ViewChild, TemplateRef, OnInit, Output, EventEmitter } from '@angular/core';
 import { isSameDay, isSameMonth, startOfDay, subDays, } from 'date-fns';
 import { Subject } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -48,6 +48,7 @@ import { EventColor } from 'calendar-utils';
 })
 export class CalendarComponent implements OnInit {
   @ViewChild('modalContent', { static: true }) modalContent: TemplateRef<any> | undefined;
+  @Output() eventsOutput = new EventEmitter<CalendarEvent[]>; 
 
   view: CalendarView = CalendarView.Month;
   CalendarView = CalendarView;
@@ -75,6 +76,7 @@ export class CalendarComponent implements OnInit {
         this.events = this.events.concat(eventsToSet);
         this.refresh.next();
       }
+      this.eventsOutput.emit(eventsToSet);
     });
   }
 
