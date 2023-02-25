@@ -1,9 +1,14 @@
 .podium {
     padding-top: 5rem;
-    width: 50%;
     position: relative;
-    display: block;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+#podium {
+    max-width: 100%;
 }
 
 .podium-name {
@@ -14,16 +19,19 @@
 }
 
 #first {
-    top: 170px;
-    left: 228px;
+    top: 19%;
+    left: 47.5%;
+    margin-top: -1.5rem;
 }
 
 #second {
-    top: 275px;
-    left: 60px;
+    top: 37%;
+    left: 32.2%;
+    margin-top: -1.5rem;
 }
 
 #third {
-    top: 340px;
-    left: 397px;
+    top: 48%;
+    left: 62.8%;
+    margin-top: -1.5rem;
 }
