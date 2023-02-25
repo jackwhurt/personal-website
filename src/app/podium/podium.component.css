@@ -1,9 +1,10 @@
 .podium {
     padding-top: 5rem;
-    width: 50%;
     position: relative;
-    display: block;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
 }
 
 .podium-name {
@@ -15,15 +16,15 @@
 
 #first {
     top: 170px;
-    left: 228px;
+    left: 260px;
 }
 
 #second {
     top: 275px;
-    left: 60px;
+    left: 91px;
 }
 
 #third {
     top: 340px;
-    left: 397px;
+    left: 430px;
 }
