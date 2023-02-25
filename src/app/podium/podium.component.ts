@@ -20,14 +20,11 @@ export class PodiumComponent implements OnChanges {
     })
     this.calendarEvents?.forEach((event) => {
       this.count[event.title] = this.count[event.title] + 1;
-      if (this.count[event.title] >= this.first.count) {
-        this.third.name = this.second.name
-        this.third.count = this.second.count;
-        this.second.name = this.first.name
-        this.second.count = this.first.count;
-        this.first.name = event.title;
-        this.first.count = this.count[event.title];
-      }
     });
+    const sortableArray = Object.entries(this.count);
+    const sortedArray = sortableArray.sort(([, a], [, b]) => a - b);
+    this.first.name = sortedArray.pop()?.[0] || '';
+    this.second.name = sortedArray.pop()?.[0] || '';
+    this.third.name = sortedArray.pop()?.[0] || '';
   }
 }

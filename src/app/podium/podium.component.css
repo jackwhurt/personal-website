@@ -1,8 +1,29 @@
-#podium {
-    padding-top: 17rem;
-    padding-left: 8%;
-    width: 90%;
+.podium {
+    padding-top: 5rem;
+    width: 50%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+}
+
+.podium-name {
+    position: absolute;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 #first {
+    top: 170px;
+    left: 228px;
+}
+
+#second {
+    top: 275px;
+    left: 60px;
+}
+
+#third {
+    top: 340px;
+    left: 397px;
 }

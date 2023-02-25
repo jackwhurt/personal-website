@@ -1,7 +1,7 @@
 <br>
-<div class="column left">
-    <app-calendar (eventsOutput)="updateCalendarEvents($event)"></app-calendar>
+<div>
+    <app-calendar id="calendar" (eventsOutput)="updateCalendarEvents($event)"></app-calendar>
 </div>
-<div class="column right">
+<div>
     <app-podium [calendarEvents]="calendarEvents"></app-podium>
 </div>

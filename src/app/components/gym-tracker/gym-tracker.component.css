@@ -1,11 +1,5 @@
-.column {
-float: left;
-}
-
-.left {
-width: 70%;
-}
-
-.right {
-width: 30%;
+#calendar {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
 }
