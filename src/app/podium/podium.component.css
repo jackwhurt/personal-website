@@ -7,6 +7,10 @@
     max-width: 100%;
 }
 
+#podium {
+    max-width: 100%;
+}
+
 .podium-name {
     position: absolute;
     text-align: center;
@@ -15,16 +19,19 @@
 }
 
 #first {
-    top: 170px;
-    left: 260px;
+    top: 19%;
+    left: 47.5%;
+    margin-top: -1.5rem;
 }
 
 #second {
-    top: 275px;
-    left: 91px;
+    top: 37%;
+    left: 32.2%;
+    margin-top: -1.5rem;
 }
 
 #third {
-    top: 340px;
-    left: 430px;
+    top: 48%;
+    left: 62.8%;
+    margin-top: -1.5rem;
 }
