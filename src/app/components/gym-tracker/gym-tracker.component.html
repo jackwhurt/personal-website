@@ -1,3 +1,7 @@
-<p>gym-tracker works!</p>
-
-<app-calendar></app-calendar>
+<br>
+<div>
+    <app-calendar id="calendar" (eventsOutput)="updateCalendarEvents($event)"></app-calendar>
+</div>
+<div>
+    <app-podium [calendarEvents]="calendarEvents"></app-podium>
+</div>

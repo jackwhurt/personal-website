@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CalendarEvent } from 'angular-calendar';
 
 @Component({
   selector: 'app-gym-tracker',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./gym-tracker.component.css']
 })
 export class GymTrackerComponent {
+  calendarEvents?: CalendarEvent[];
 
+  updateCalendarEvents(events: CalendarEvent[]) {
+    this.calendarEvents = events;
+  }
 }

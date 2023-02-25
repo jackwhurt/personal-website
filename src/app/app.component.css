@@ -1,6 +1,6 @@
 #page-container {
     position: relative;
-    min-height: calc(100vh - 13rem);
+    min-height: calc(100vh);
 }
 
 #content-wrap {

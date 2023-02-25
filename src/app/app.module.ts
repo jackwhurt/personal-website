@@ -17,6 +17,7 @@ import { GymTrackerComponent } from './components/gym-tracker/gym-tracker.compon
 import { CalendarComponent } from './components/calendar/calendar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PodiumComponent } from './podium/podium.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     GymTrackerComponent,
     CalendarComponent,
     PageNotFoundComponent,
+    PodiumComponent,
   ],
   imports: [
     BrowserModule,
