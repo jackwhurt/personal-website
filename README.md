@@ -16,6 +16,8 @@ Message Jack for a copy of the shortcut and perform the following steps.
 - Select the create gym event shortcut
 - Either select or deselect ask before running depending on your preference
 
+<strong> Please note the first time you run the shortcut you will be asked to select a colour and enter your name </strong>
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
 ## Development server
