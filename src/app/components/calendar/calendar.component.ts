@@ -112,6 +112,17 @@ export class CalendarComponent implements OnInit {
   }
 
   closeOpenMonthViewDay() {
+    const year: string = this.viewDate.getFullYear().toString();
+    const month: string = String(this.viewDate.getMonth() + 1).padStart(2, '0');
     this.activeDayIsOpen = false;
+
+    this.calendarEventService.getCalendarEventsByMonth(year + '-' + month).subscribe((eventsToSet) => {
+      if (eventsToSet) {
+        eventsToSet.map((entry) => entry.start = new Date(entry.start));
+        this.events = this.events.concat(eventsToSet);
+        this.refresh.next();
+      }
+      this.eventsOutput.emit(eventsToSet);
+    });
   }
 }
