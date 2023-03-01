@@ -13,8 +13,15 @@ export class PodiumComponent implements OnChanges {
   second: { name: string, count: number } = { name: '', count: 0 };
   third: { name: string, count: number } = { name: '', count: 0 };
 
+  reset() {
+    this.count = {};
+    this.first = { name: '', count: 0 };
+    this.second = { name: '', count: 0 };
+    this.third = { name: '', count: 0 };
+  }
 
   ngOnChanges() {
+    this.reset();
     this.calendarEvents?.forEach((event) => {
       this.count[event.title] = 0;
     })
