@@ -78,6 +78,19 @@ export class CalendarComponent implements OnInit {
       }
       this.eventsOutput.emit(eventsToSet);
     });
+
+    let monthBefore: string = date.getMonth().toString();
+    if(monthBefore === '0') {
+      monthBefore = '12';
+    }
+    this.calendarEventService.getCalendarEventsByMonth(year + '-' + monthBefore).subscribe((eventsToSet) => {
+      if (eventsToSet) {
+        eventsToSet.map((entry) => entry.start = new Date(entry.start));
+        this.events = this.events.concat(eventsToSet);
+        this.refresh.next();
+      }
+      this.eventsOutput.emit(eventsToSet);
+    });
   }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
