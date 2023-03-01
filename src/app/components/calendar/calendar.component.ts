@@ -65,7 +65,7 @@ export class CalendarComponent implements OnInit {
   constructor(private modal: NgbModal, private calendarEventService: CalendarEventService) { }
 
   ngOnInit() {
-    this.loadEvents();
+    this.loadEvents(new Date());
   }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
@@ -102,13 +102,12 @@ export class CalendarComponent implements OnInit {
   closeOpenMonthViewDay() {
     this.activeDayIsOpen = false;
 
-    this.loadEvents();
+    this.loadEvents(this.viewDate);
   }
 
-  private loadEvents() {
+  private loadEvents(date: Date) {
     this.events = [];
 
-    const date: Date = new Date();
     const year: string = date.getFullYear().toString();
     const month: string = String(date.getMonth() + 1).padStart(2, '0');
 
@@ -133,7 +132,6 @@ export class CalendarComponent implements OnInit {
         this.events = this.events.concat(eventsToSet);
         this.refresh.next();
       }
-      this.eventsOutput.emit(eventsToSet);
     });
   }
 }
