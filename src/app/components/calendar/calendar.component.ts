@@ -4,7 +4,6 @@ import { Subject } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarEvent, CalendarEventTimesChangedEvent, CalendarView } from 'angular-calendar';
 import { CalendarEventService } from 'src/app/services/calendar-event.service';
-import { EventColor } from 'calendar-utils';
 // TODO: Delete
 // const colors: Record<string, EventColor> = {
 //   red: {
@@ -66,31 +65,7 @@ export class CalendarComponent implements OnInit {
   constructor(private modal: NgbModal, private calendarEventService: CalendarEventService) { }
 
   ngOnInit() {
-    const date: Date = new Date();
-    const year: string = date.getFullYear().toString();
-    const month: string = String(date.getMonth() + 1).padStart(2, '0');
-
-    this.calendarEventService.getCalendarEventsByMonth(year + '-' + month).subscribe((eventsToSet) => {
-      if (eventsToSet) {
-        eventsToSet.map((entry) => entry.start = new Date(entry.start));
-        this.events = this.events.concat(eventsToSet);
-        this.refresh.next();
-      }
-      this.eventsOutput.emit(eventsToSet);
-    });
-
-    let monthBefore: string = date.getMonth().toString();
-    if(monthBefore === '0') {
-      monthBefore = '12';
-    }
-    this.calendarEventService.getCalendarEventsByMonth(year + '-' + monthBefore).subscribe((eventsToSet) => {
-      if (eventsToSet) {
-        eventsToSet.map((entry) => entry.start = new Date(entry.start));
-        this.events = this.events.concat(eventsToSet);
-        this.refresh.next();
-      }
-      this.eventsOutput.emit(eventsToSet);
-    });
+    this.loadEvents();
   }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
@@ -125,11 +100,34 @@ export class CalendarComponent implements OnInit {
   }
 
   closeOpenMonthViewDay() {
-    const year: string = this.viewDate.getFullYear().toString();
-    const month: string = String(this.viewDate.getMonth() + 1).padStart(2, '0');
     this.activeDayIsOpen = false;
 
+    this.loadEvents();
+  }
+
+  private loadEvents() {
+    this.events = [];
+
+    const date: Date = new Date();
+    const year: string = date.getFullYear().toString();
+    const month: string = String(date.getMonth() + 1).padStart(2, '0');
+
     this.calendarEventService.getCalendarEventsByMonth(year + '-' + month).subscribe((eventsToSet) => {
+      if (eventsToSet) {
+        eventsToSet.map((entry) => entry.start = new Date(entry.start));
+        this.events = this.events.concat(eventsToSet);
+        this.refresh.next();
+      }
+      this.eventsOutput.emit(eventsToSet);
+    });
+
+    let monthBefore: string = date.getMonth().toString();
+    if(monthBefore === '0') {
+      monthBefore = '12';
+    } else if(monthBefore !== '11' && monthBefore !== '10') {
+      monthBefore = '0' + monthBefore;
+    }
+    this.calendarEventService.getCalendarEventsByMonth(year + '-' + monthBefore).subscribe((eventsToSet) => {
       if (eventsToSet) {
         eventsToSet.map((entry) => entry.start = new Date(entry.start));
         this.events = this.events.concat(eventsToSet);
