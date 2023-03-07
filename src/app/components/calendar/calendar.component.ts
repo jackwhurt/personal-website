@@ -109,7 +109,7 @@ export class CalendarComponent implements OnInit {
     this.events = [];
 
     const year: string = date.getFullYear().toString();
-    const month: string = String(date.getMonth() + 1).padStart(2, '0');
+    let month: string = String(date.getMonth() + 1).padStart(2, '0')
 
     this.calendarEventService.getCalendarEventsByMonth(year + '-' + month).subscribe((eventsToSet) => {
       if (eventsToSet) {
@@ -120,13 +120,23 @@ export class CalendarComponent implements OnInit {
       this.eventsOutput.emit(eventsToSet);
     });
 
-    let monthBefore: string = date.getMonth().toString();
-    if(monthBefore === '0') {
+    let monthBefore: string = String(date.getMonth()).padStart(2, '0');
+    if(monthBefore === '00') {
       monthBefore = '12';
-    } else if(monthBefore !== '11' && monthBefore !== '10') {
-      monthBefore = '0' + monthBefore;
     }
     this.calendarEventService.getCalendarEventsByMonth(year + '-' + monthBefore).subscribe((eventsToSet) => {
+      if (eventsToSet) {
+        eventsToSet.map((entry) => entry.start = new Date(entry.start));
+        this.events = this.events.concat(eventsToSet);
+        this.refresh.next();
+      }
+    });
+
+    let monthAfter: string = String(date.getMonth() + 2).padStart(2, '0');
+    if(monthAfter === '13') {
+      monthAfter = '01';
+    }
+    this.calendarEventService.getCalendarEventsByMonth(year + '-' + monthAfter).subscribe((eventsToSet) => {
       if (eventsToSet) {
         eventsToSet.map((entry) => entry.start = new Date(entry.start));
         this.events = this.events.concat(eventsToSet);

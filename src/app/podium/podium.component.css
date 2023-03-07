@@ -1,37 +1,90 @@
 .podium {
-    padding-top: 5rem;
-    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 90%;
+    max-width: 700px;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
-#podium {
-    max-width: 100%;
+.first-place,
+.second-place,
+.third-place {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 33.3333%;
+}
+
+.first-podium {
+    background-color: rgb(88, 193, 177);
+    height: 250px;
+    width: 90%;
+}
+
+.second-podium {
+    background-color: rgb(249, 202, 86);
+    height: 185px;
+    width: 90%;
+}
+
+.third-podium {
+    background-color: rgb(227, 108, 84);
+    height: 120px;
+    width: 90%;
+}
+
+.first-shadow {
+    background-color: rgb(66, 175, 159);
+    height: 10px;
+    width: 90%;
+}
+
+.second-shadow {
+    background-color: rgb(209, 169, 66);
+    height: 10px;
+    width: 90%;
+}
+
+.third-shadow {
+    background-color: rgb(218, 85, 58);
+    height: 10px;
+    width: 90%;
+}
+
+.first-top {
+    background-color: rgb(88, 193, 177);
+    height: 25px;
+    width: 100%;
+}
+
+.second-top {
+    background-color: rgb(249, 202, 86);
+    height: 25px;
+    width: 100%;
+}
+
+.third-top {
+    background-color: rgb(227, 108, 84);
+    height: 25px;
+    width: 100%;
+}
+
+.position {
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .podium-name {
-    position: absolute;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-#first {
-    top: 19%;
-    left: 47.5%;
-    margin-top: -1.5rem;
-}
-
-#second {
-    top: 37%;
-    left: 32.2%;
-    margin-top: -1.5rem;
-}
-
-#third {
-    top: 48%;
-    left: 62.8%;
-    margin-top: -1.5rem;
+    margin-bottom: 0.1rem;
 }
