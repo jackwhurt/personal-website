@@ -19,20 +19,56 @@
 }
 
 .first-podium {
-    background-color: rgb(126,195,185);
+    background-color: rgb(88, 193, 177);
     height: 250px;
-    width: 100%;
+    width: 90%;
 }
 
 .second-podium {
-    background-color: silver;
-    height: 175px;
-    width: 100%;
+    background-color: rgb(249, 202, 86);
+    height: 185px;
+    width: 90%;
 }
 
 .third-podium {
-    background-color: #CD7F32;
-    height: 100px;
+    background-color: rgb(227, 108, 84);
+    height: 120px;
+    width: 90%;
+}
+
+.first-shadow {
+    background-color: rgb(66, 175, 159);
+    height: 10px;
+    width: 90%;
+}
+
+.second-shadow {
+    background-color: rgb(209, 169, 66);
+    height: 10px;
+    width: 90%;
+}
+
+.third-shadow {
+    background-color: rgb(218, 85, 58);
+    height: 10px;
+    width: 90%;
+}
+
+.first-top {
+    background-color: rgb(88, 193, 177);
+    height: 25px;
+    width: 100%;
+}
+
+.second-top {
+    background-color: rgb(249, 202, 86);
+    height: 25px;
+    width: 100%;
+}
+
+.third-top {
+    background-color: rgb(227, 108, 84);
+    height: 25px;
     width: 100%;
 }
 
@@ -42,7 +78,7 @@
     font-weight: 700;
     letter-spacing: -0.05em;
     color: white;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 1rem;
