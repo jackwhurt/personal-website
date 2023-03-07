@@ -13,15 +13,9 @@ export class PodiumComponent implements OnChanges {
   second: { name: string, count: number } = { name: '', count: 0 };
   third: { name: string, count: number } = { name: '', count: 0 };
 
-  reset() {
-    this.count = {};
-    this.first = { name: '', count: 0 };
-    this.second = { name: '', count: 0 };
-    this.third = { name: '', count: 0 };
-  }
 
   ngOnChanges() {
-    this.reset();
+    this.init();
     this.calendarEvents?.forEach((event) => {
       this.count[event.title] = 0;
     })
@@ -33,5 +27,12 @@ export class PodiumComponent implements OnChanges {
     this.first.name = sortedArray.pop()?.[0] || '';
     this.second.name = sortedArray.pop()?.[0] || '';
     this.third.name = sortedArray.pop()?.[0] || '';
+  }
+
+  init(): void {
+    this.count = { };
+    this.first = { name: '', count: 0 };
+    this.second = { name: '', count: 0 };
+    this.third = { name: '', count: 0 };
   }
 }
