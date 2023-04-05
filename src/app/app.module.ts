@@ -18,6 +18,7 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PodiumComponent } from './components/podium/podium.component';
+import { CvComponent } from './components/cv/cv.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PodiumComponent } from './components/podium/podium.component';
     CalendarComponent,
     PageNotFoundComponent,
     PodiumComponent,
+    CvComponent,
   ],
   imports: [
     BrowserModule,
