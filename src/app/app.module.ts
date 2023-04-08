@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PodiumComponent } from './components/podium/podium.component';
 import { CvComponent } from './components/cv/cv.component';
+import { CvItemComponent } from './components/cv/cv-item/cv-item.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CvComponent } from './components/cv/cv.component';
     PageNotFoundComponent,
     PodiumComponent,
     CvComponent,
+    CvItemComponent,
   ],
   imports: [
     BrowserModule,
