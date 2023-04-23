@@ -6,7 +6,9 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./cv-item.component.css']
 })
 export class CvItemComponent {
-  @Input() title: string = 'Title';
-  @Input() duration: string = 'March 2020 - September 2021'
-  @Input() description: string = 'Achieved XYZ'
+  @Input() title?: string;
+  @Input() location?: string;
+  @Input() duration?: string;
+  @Input() description?: string;
+  @Input() bulletPoints?: string[];
 }

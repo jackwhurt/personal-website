@@ -20,6 +20,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { PodiumComponent } from './components/podium/podium.component';
 import { CvComponent } from './components/cv/cv.component';
 import { CvItemComponent } from './components/cv/cv-item/cv-item.component';
+import { CvSectionComponent } from './components/cv/cv-section/cv-section.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { CvItemComponent } from './components/cv/cv-item/cv-item.component';
     PodiumComponent,
     CvComponent,
     CvItemComponent,
+    CvSectionComponent,
   ],
   imports: [
     BrowserModule,

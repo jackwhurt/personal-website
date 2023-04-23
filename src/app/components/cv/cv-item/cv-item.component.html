@@ -1,12 +1,17 @@
 <div class="row">
     <div class="col-sm-8">
-        <h4>{{ title }}</h4>
+        <p *ngIf="title" class="d-inline-block fw-bold">{{ title }}</p>
+        <p *ngIf="location" class="d-inline-block">, {{ location }}</p>
     </div>
     <div class="col-sm-4">
-        <p class="float-end">{{ duration }}</p>
+        <p *ngIf="duration" class="float-end">{{ duration }}</p>
     </div>
 </div>
-<hr class="my-0">
-<div>
-    <p class="">{{ description }}</p>
+<div *ngIf="description">
+    <p>{{ description }}</p>
+</div>
+<div *ngIf="bulletPoints">
+    <ul>
+        <li *ngFor="let bulletPoint of bulletPoints">{{ bulletPoint }}</li>
+    </ul>
 </div>

@@ -1,10 +1,14 @@
 <p>cv works!</p>
 <div class="row">
-    <div class="col-md-2">
-    </div>
+    <div class="col-md-2"></div>
     <div class="col-md-8">
-        <app-cv-item></app-cv-item>
+        <div *ngFor="let cvSection of cvSections">
+            <app-cv-section [title]="cvSection.title"></app-cv-section>
+            <div *ngFor="let cvItem of cvSection.cvItems">
+                <app-cv-item [title]="cvItem.title" [description]="cvItem.description" [location]="cvItem.location"
+                    [bulletPoints]="cvItem.bulletPoints" [duration]="cvItem.duration"></app-cv-item>
+            </div>
+        </div>
     </div>
-    <div class="col-md-2">
-    </div>
+    <div class="col-md-2"></div>
 </div>
