@@ -9,4 +9,5 @@ export interface CvItem {
     duration?: string;
     description?: string;
     bulletPoints?: string[];
+    list?: string[];
 }

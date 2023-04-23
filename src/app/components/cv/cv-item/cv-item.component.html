@@ -15,3 +15,9 @@
         <li *ngFor="let bulletPoint of bulletPoints">{{ bulletPoint }}</li>
     </ul>
 </div>
+<div *ngIf="list">
+    <ng-container *ngFor="let item of list; let i = index; let isLast = last">
+      <p class="d-inline">{{ item }}<span *ngIf="!isLast"> | </span></p>
+    </ng-container>
+  </div>
+  

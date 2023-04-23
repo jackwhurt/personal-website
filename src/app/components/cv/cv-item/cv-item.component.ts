@@ -11,4 +11,5 @@ export class CvItemComponent {
   @Input() duration?: string;
   @Input() description?: string;
   @Input() bulletPoints?: string[];
+  @Input() list?: string[];
 }

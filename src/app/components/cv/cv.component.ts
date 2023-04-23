@@ -11,7 +11,7 @@ export class CvComponent {
     {
       title: 'Skills',
       cvItems: [{
-        bulletPoints: ['point1', 'point2']
+        list: ['point1', 'point2']
       }]
     },
     {
