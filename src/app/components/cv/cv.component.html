@@ -1,7 +1,7 @@
 <p>cv works!</p>
 <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
+    <div class="col-1"></div>
+    <div class="col-10">
         <div *ngFor="let cvSection of cvSections">
             <app-cv-section [title]="cvSection.title"></app-cv-section>
             <div *ngFor="let cvItem of cvSection.cvItems">
@@ -10,5 +10,5 @@
             </div>
         </div>
     </div>
-    <div class="col-md-2"></div>
+    <div class="col-1"></div>
 </div>
