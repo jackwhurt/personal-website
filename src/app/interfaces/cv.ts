@@ -10,4 +10,5 @@ export interface CvItem {
     description?: string;
     bulletPoints?: string[];
     list?: string[];
+    modal?: boolean;
 }

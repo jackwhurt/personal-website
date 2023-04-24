@@ -89,6 +89,7 @@ export class CvComponent {
     {
       title: 'Achievements',
       cvItems: [{
+        modal: true,
         bulletPoints: [
           'Microsoft Certified: Azure Fundamentals',
           'AWS Certified Cloud Practitioner & Certified Solutions Architect - Associate',

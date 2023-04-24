@@ -1,3 +1,13 @@
-p, ul {
+p,
+ul {
     margin-bottom: 0;
+}
+
+.clickable {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.clickable:hover {
+    color: #007bff;
 }

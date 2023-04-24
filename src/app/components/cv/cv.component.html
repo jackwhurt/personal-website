@@ -7,7 +7,7 @@
             <div *ngFor="let cvItem of cvSection.cvItems">
                 <app-cv-item [title]="cvItem.title" [description]="cvItem.description" [location]="cvItem.location"
                     [bulletPoints]="cvItem.bulletPoints" [duration]="cvItem.duration"
-                    [list]="cvItem.list" [modal]="true"></app-cv-item>
+                    [list]="cvItem.list" [modal]="cvItem.modal"></app-cv-item>
             </div>
         </div>
         <br>

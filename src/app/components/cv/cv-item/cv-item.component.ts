@@ -1,5 +1,4 @@
 import { Component, Input, ViewChild } from '@angular/core';
-import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { CvModalComponent } from '../cv-modal/cv-modal.component';
 
 @Component({
@@ -16,11 +15,4 @@ export class CvItemComponent {
   @Input() list?: string[];
   @Input() modal?: boolean;
   @ViewChild('cvModal') cvModalComponent!: CvModalComponent;
-
-  constructor(private modalService: NgbModal) { }
-
-  openModal() {
-    console.warn('bruh');
-    const modalRef: NgbModalRef = this.modalService.open(CvModalComponent);
-  }
 }

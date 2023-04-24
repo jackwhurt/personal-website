@@ -12,8 +12,10 @@
 </div>
 <div *ngIf="bulletPoints">
     <ul *ngIf="modal">
-        <li *ngFor="let bulletPoint of bulletPoints" (click)="openModal()">{{ bulletPoint }}</li>
-        <app-cv-modal #cvModal></app-cv-modal>
+        <li *ngFor="let bulletPoint of bulletPoints" data-toggle="modal" data-target="#exampleModal">
+            <p class="clickable">{{ bulletPoint }}</p>
+            <app-cv-modal></app-cv-modal>
+        </li>
     </ul>
     <ul *ngIf="!modal">
         <li *ngFor="let bulletPoint of bulletPoints">{{ bulletPoint }}</li>
