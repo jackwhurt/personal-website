@@ -92,7 +92,8 @@ export class CvComponent {
         modal: true,
         bulletPoints: [
           'Microsoft Certified: Azure Fundamentals',
-          'AWS Certified Cloud Practitioner & Certified Solutions Architect - Associate',
+          'AWS Certified Cloud Practitioner',
+          'AWS Certified Solutions Architect - Associate',
           'Touch Typing qualification (KAZ - City & Guilds Assured)',
         ]
       }]
