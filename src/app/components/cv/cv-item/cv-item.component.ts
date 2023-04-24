@@ -1,4 +1,5 @@
 import { Component, Input, ViewChild } from '@angular/core';
+import { Point } from 'src/app/interfaces/cv';
 import { CvModalComponent } from '../cv-modal/cv-modal.component';
 
 @Component({
@@ -11,8 +12,7 @@ export class CvItemComponent {
   @Input() location?: string;
   @Input() duration?: string;
   @Input() description?: string;
-  @Input() bulletPoints?: string[];
+  @Input() bulletPoints?: Point[];
   @Input() list?: string[];
-  @Input() modal?: boolean;
   @ViewChild('cvModal') cvModalComponent!: CvModalComponent;
 }

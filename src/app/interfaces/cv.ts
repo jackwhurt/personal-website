@@ -3,12 +3,23 @@ export interface CvSection {
     cvItems: CvItem[];
 }
 
+export interface ModalContent {
+    title?: string;
+    body?: string;
+    link?: string;
+    picture?: string;
+}
+
+export interface Point {
+    title: string;
+    modal?: ModalContent;
+}
+
 export interface CvItem {
     title?: string;
     location?: string;
     duration?: string;
     description?: string;
-    bulletPoints?: string[];
+    bulletPoints?: Point[];
     list?: string[];
-    modal?: boolean;
 }

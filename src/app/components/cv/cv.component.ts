@@ -22,10 +22,10 @@ export class CvComponent {
           location: 'Kainos',
           duration: 'Aug 2022 - Aug 2023',
           bulletPoints: [
-            'Currently developing a web-app using Angular to digitalise a multitude of workflows within hospitals',
-            'Led original initiative to raise unit test coverage, resulting in an increase of 100%',
-            'Mentoring the apprentice with efforts such as pair programming sessions and weekly catch-up calls',
-            'Part of a 7 week training academy which covered topics such as: full-stack development, REST APIs, databases, functional & non-functional testing, quality code and agile methodologies',
+            { title: 'Currently developing a web-app using Angular to digitalise a multitude of workflows within hospitals' },
+            { title: 'Led original initiative to raise unit test coverage, resulting in an increase of 100%' },
+            { title: 'Mentoring the apprentice with efforts such as pair programming sessions and weekly catch-up calls' },
+            { title: 'Part of a 7 week training academy which covered topics such as: full-stack development, REST APIs, databases, functional & non-functional testing, quality code and agile methodologies' },
           ]
         },
         {
@@ -33,7 +33,7 @@ export class CvComponent {
           description: 'Description',
           location: 'Location',
           duration: 'Duration',
-          bulletPoints: ['point1', 'point2']
+          bulletPoints: [{ title: 'point1' }, { title: 'point2' }]
         }
       ]
     },
@@ -45,14 +45,14 @@ export class CvComponent {
           description: 'Description',
           location: 'Location',
           duration: 'Duration',
-          bulletPoints: ['point1', 'point2']
+          bulletPoints: [{ title: 'point1' }, { title: 'point2' }]
         },
         {
           title: 'CvTitle',
           description: 'Description',
           location: 'Location',
           duration: 'Duration',
-          bulletPoints: ['point1', 'point2']
+          bulletPoints: [{ title: 'point1' }, { title: 'point2' }]
         }
       ]
     },
@@ -76,25 +76,34 @@ export class CvComponent {
           title: 'CvTitle',
           location: 'Location',
           duration: 'Duration',
-          bulletPoints: ['point1', 'point2']
+          bulletPoints: [{ title: 'point1' }, { title: 'point2' }]
         },
         {
           title: 'CvTitle',
           location: 'Location',
           duration: 'Duration',
-          bulletPoints: ['point1', 'point2']
+          bulletPoints: [{ title: 'point1' }, { title: 'point2' }]
         },
       ]
     },
     {
       title: 'Achievements',
       cvItems: [{
-        modal: true,
         bulletPoints: [
-          'Microsoft Certified: Azure Fundamentals',
-          'AWS Certified Cloud Practitioner',
-          'AWS Certified Solutions Architect - Associate',
-          'Touch Typing qualification (KAZ - City & Guilds Assured)',
+          {
+            title: 'Microsoft Certified: Azure Fundamentals',
+            modal: {
+              title: 'Microsoft Certified: Azure Fundamentals',
+            },
+          },
+          {
+            title: 'AWS Certified Cloud Practitioner',
+            modal: {
+              body: 'Easiest AWS Cert',
+            },
+          },
+          { title: 'AWS Certified Solutions Architect - Associate' },
+          { title: 'Touch Typing qualification (KAZ - City & Guilds Assured)' },
         ]
       }]
     }

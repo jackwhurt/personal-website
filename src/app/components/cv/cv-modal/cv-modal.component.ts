@@ -1,5 +1,5 @@
-import { Component, ElementRef, TemplateRef, ViewChild } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Input } from '@angular/core';
+import { ModalContent } from 'src/app/interfaces/cv';
 
 @Component({
   selector: 'app-cv-modal',
@@ -7,4 +7,6 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./cv-modal.component.css']
 })
 export class CvModalComponent {
+  @Input() modalContent?: ModalContent;
+  @Input() id!: number;
 }
