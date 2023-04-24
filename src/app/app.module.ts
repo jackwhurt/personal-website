@@ -21,6 +21,7 @@ import { PodiumComponent } from './components/podium/podium.component';
 import { CvComponent } from './components/cv/cv.component';
 import { CvItemComponent } from './components/cv/cv-item/cv-item.component';
 import { CvSectionComponent } from './components/cv/cv-section/cv-section.component';
+import { CvModalComponent } from './components/cv/cv-modal/cv-modal.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CvSectionComponent } from './components/cv/cv-section/cv-section.compon
     CvComponent,
     CvItemComponent,
     CvSectionComponent,
+    CvModalComponent,
   ],
   imports: [
     BrowserModule,

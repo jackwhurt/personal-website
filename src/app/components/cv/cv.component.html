@@ -6,9 +6,16 @@
             <app-cv-section [title]="cvSection.title"></app-cv-section>
             <div *ngFor="let cvItem of cvSection.cvItems">
                 <app-cv-item [title]="cvItem.title" [description]="cvItem.description" [location]="cvItem.location"
-                    [bulletPoints]="cvItem.bulletPoints" [duration]="cvItem.duration" [list]="cvItem.list"></app-cv-item>
+                    [bulletPoints]="cvItem.bulletPoints" [duration]="cvItem.duration"
+                    [list]="cvItem.list" [modal]="true"></app-cv-item>
             </div>
         </div>
+        <br>
+        <br>
+        <p class="text-center">
+            Please email me for pdf version
+            <a href="mailto:jackwhurt@gmail.com"><span class="bi bi-envelope-fill padding"></span></a>
+        </p>
     </div>
     <div class="col-1"></div>
 </div>

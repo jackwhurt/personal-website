@@ -11,7 +11,7 @@ export class CvComponent {
     {
       title: 'Skills',
       cvItems: [{
-        list: ['point1', 'point2']
+        list: ['Java', 'Typescript', 'C', 'Haskell']
       }]
     },
     {
@@ -89,7 +89,11 @@ export class CvComponent {
     {
       title: 'Achievements',
       cvItems: [{
-        bulletPoints: ['point1', 'point2']
+        bulletPoints: [
+          'Microsoft Certified: Azure Fundamentals',
+          'AWS Certified Cloud Practitioner & Certified Solutions Architect - Associate',
+          'Touch Typing qualification (KAZ - City & Guilds Assured)',
+        ]
       }]
     }
   ]
