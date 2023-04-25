@@ -12,11 +12,11 @@
 </div>
 <div *ngIf="bulletPoints">
     <ul>
-        <ng-container *ngFor="let bulletPoint of bulletPoints; let i = index;">
-            <li [attr.data-toggle]="'modal'" [attr.data-target]="'#modal-' + i"> <!-- TODO: Sort example modal target -->
+        <ng-container *ngFor="let bulletPoint of bulletPoints">
+            <li [attr.data-toggle]="'modal'" [attr.data-target]="'#modal-' + hash(bulletPoint.title)">
                 <div *ngIf="bulletPoint.modal">
                     <p class="clickable">{{ bulletPoint.title }}</p>
-                    <app-cv-modal [id]="i" [modalContent]="bulletPoint.modal"></app-cv-modal>
+                    <app-cv-modal [id]="hash(bulletPoint.title)" [modalContent]="bulletPoint.modal"></app-cv-modal>
                 </div>
                 <div *ngIf="!bulletPoint.modal">
                     <p>{{ bulletPoint.title }}</p>

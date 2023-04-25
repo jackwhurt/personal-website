@@ -1,11 +1,11 @@
-<div class="modal fade" id="modal-{{ id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modal-{{ id }}" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div *ngIf="modalContent?.title" class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">{{ modalContent?.title }}</h5>
+                <h5 class="modal-title">{{ modalContent?.title }}</h5>
                 <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
             </div>
-            <div *ngIf="modalContent?.body" class="modal-body">
+            <div *ngIf="modalContent?.body || modalContent?.link || modalContent?.picture" class="modal-body">
                 {{ modalContent?.body }}
             </div>
             <div class="modal-footer">
