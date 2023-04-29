@@ -15,8 +15,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       transition('collapsed <=> expanded', [animate('300ms ease-in-out')]),
     ]),
     trigger('scrollIn', [
-      state('void', style({ opacity: 0, transform: 'translateY(-20px)' })),
-      transition('void <=> *', [animate('300ms ease-in-out')]),
+      state('void', style({ opacity: 0, transform: 'translateY(-100%)' })),
+      transition('void => *', [animate('300ms ease-in-out')]),
     ]),
   ],
 })

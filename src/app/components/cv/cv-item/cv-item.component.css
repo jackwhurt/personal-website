@@ -16,3 +16,7 @@ ul {
 .multiline-text {
     white-space: pre-line;
 }
+
+.smaller-font {
+    font-size: 0.95rem;
+}

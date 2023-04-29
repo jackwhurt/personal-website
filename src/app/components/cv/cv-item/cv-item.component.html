@@ -26,9 +26,9 @@
                         <i class="bi bi-chevron-down ms-2"
                             [class.bi-chevron-up]="isExpanded(bulletPoint.dropdown.title)"></i>
                     </p>
-                    <div [@expandCollapse]="isExpanded(bulletPoint.dropdown.title) ? 'expanded' : 'collapsed'">
-                        <p [style.display]="isExpanded ? 'block' : 'none'" [@scrollIn]>
-                            This is the additional text that will be shown when the text above is clicked.
+                    <div [@expandCollapse]="isExpanded(bulletPoint.dropdown.title) ? 'expanded' : 'collapsed'" class="overflow-hidden">
+                        <p class="multiline-text smaller-font ps-2" [style.display]="isExpanded ? 'block' : 'none'" [@scrollIn]>
+                            {{ bulletPoint.dropdown.body }}
                         </p>
                     </div>
                 </div>

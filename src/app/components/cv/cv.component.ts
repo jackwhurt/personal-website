@@ -76,7 +76,7 @@ export class CvComponent {
               title: 'GCSE: 10 passes including five at Grade 9',
               dropdown: {
                 title: 'GCSE Grades (2013 - 2018)',
-                body: 'Displays strong knowledge of Amazon\'s cloud services. Focuses on design of cost and performance optimised solutions.',
+                body: 'Grade 9 in Mathematics, Computer Science, Physics, Chemistry, Biology \n Grade 6 in German & Geography \n Grade 5 in History, English Lit & English Lan',
               },
             },
             { title: 'Awarded The ACI Trophy for Outstanding Achievements in IT and The Newton Award' },

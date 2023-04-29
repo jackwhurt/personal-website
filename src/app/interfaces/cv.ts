@@ -12,7 +12,7 @@ export interface ModalContent {
 
 export interface DropdownContent {
     title: string;
-    body?: string;
+    body: string;
 }
 
 export interface Point {
