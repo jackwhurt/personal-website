@@ -1,21 +1,22 @@
-<p>cv works!</p>
-<div class="row">
-    <div class="col-1"></div>
-    <div class="col-10">
-        <div *ngFor="let cvSection of cvSections">
-            <app-cv-section [title]="cvSection.title"></app-cv-section>
-            <div *ngFor="let cvItem of cvSection.cvItems">
-                <app-cv-item [title]="cvItem.title" [description]="cvItem.description" [location]="cvItem.location"
-                    [bulletPoints]="cvItem.bulletPoints" [duration]="cvItem.duration"
-                    [list]="cvItem.list"></app-cv-item>
+<div class="cv-container">
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div *ngFor="let cvSection of cvSections">
+                <app-cv-section [title]="cvSection.title"></app-cv-section>
+                <div *ngFor="let cvItem of cvSection.cvItems">
+                    <app-cv-item [title]="cvItem.title" [description]="cvItem.description" [location]="cvItem.location"
+                        [bulletPoints]="cvItem.bulletPoints" [duration]="cvItem.duration"
+                        [list]="cvItem.list"></app-cv-item>
+                </div>
             </div>
+            <br>
+            <br>
+            <p class="text-center">
+                Download the pdf version
+                <a class="no-underline" href="mailto:jackwhurt@gmail.com">here <span class="bi bi-download padding"></span></a>
+            </p>
         </div>
-        <br>
-        <br>
-        <p class="text-center">
-            Please email me for pdf version
-            <a href="mailto:jackwhurt@gmail.com"><span class="bi bi-envelope-fill padding"></span></a>
-        </p>
+        <div class="col-1"></div>
     </div>
-    <div class="col-1"></div>
 </div>

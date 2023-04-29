@@ -11,7 +11,9 @@ export class CvComponent {
     {
       title: 'Skills',
       cvItems: [{
-        list: ['Java', 'Typescript', 'C', 'Haskell']
+        list: ['Java', 'Typescript', 'C', 'Haskell', 'HTML', 'CSS', 'Angular', 'React', 'Springboot', 'Less.js', 'Bootstrap',
+          'Latex', 'SQL', 'NoSQL', 'REST', 'Node', 'Git', 'AWS', 'Azure', 'CI/CD', 'Agile', 'OOP', 'Functional', 'Full-Stack',
+          'Unit Testing', 'Docker']
       }]
     },
     {
@@ -23,17 +25,20 @@ export class CvComponent {
           duration: 'Aug 2022 - Aug 2023',
           bulletPoints: [
             { title: 'Currently developing a web-app using Angular to digitalise a multitude of workflows within hospitals' },
-            { title: 'Led original initiative to raise unit test coverage, resulting in an increase of 100%' },
+            { title: 'Led original initiative to raise unit test coverage, resulting in coverage doubling' },
             { title: 'Mentoring the apprentice with efforts such as pair programming sessions and weekly catch-up calls' },
             { title: 'Part of a 7 week training academy which covered topics such as: full-stack development, REST APIs, databases, functional & non-functional testing, quality code and agile methodologies' },
           ]
         },
         {
-          title: 'CvTitle',
-          description: 'Description',
-          location: 'Location',
-          duration: 'Duration',
-          bulletPoints: [{ title: 'point1' }, { title: 'point2' }]
+          title: 'Intern Software Developer',
+          location: 'BigSpark',
+          duration: 'Jun 2021 - Aug 2021',
+          bulletPoints: [
+            { title: 'Designed a wrapper web application for Amazon Deequ using Java, Javascript, Springboot, React & AWS' },
+            { title: 'Led the development of the REST API that was dockerized and hosted in EC2, which I eventually moved to spot instances to cut costs by 55%' },
+            { title: 'Presented and demoed my work on the company wide fortnightly calls' },
+          ]
         }
       ]
     },
@@ -41,18 +46,15 @@ export class CvComponent {
       title: 'Education',
       cvItems: [
         {
-          title: 'CvTitle',
-          description: 'Description',
-          location: 'Location',
-          duration: 'Duration',
-          bulletPoints: [{ title: 'point1' }, { title: 'point2' }]
+          title: 'BSc Mathematics and Computer Science',
+          description: 'Achieved 1:1 in First & Second Year with highlights of 92 in Object Oriented Programming and 89 in Systems Programming in C/C++',
+          location: 'University of Birmingham',
+          duration: '2020 - 2024',
         },
         {
-          title: 'CvTitle',
-          description: 'Description',
-          location: 'Location',
-          duration: 'Duration',
-          bulletPoints: [{ title: 'point1' }, { title: 'point2' }]
+          title: 'The King\'s Grammar School Grantham',
+          description: 'A-Level: A*A*AA in Mathematics, Computer Science, Physics, & Further Mathematics (AS) respectively \n GCSE: 10 passes including five at Grade 9 \n Awarded The ACI Trophy for Outstanding Achievements in IT and The Newton Award',
+          duration: '2013 - 2020',
         }
       ]
     },
@@ -60,12 +62,12 @@ export class CvComponent {
       title: 'Projects',
       cvItems: [
         {
-          title: 'CvTitle',
-          description: 'Description',
+          title: 'Personal Website',
+          description: 'Developed a personal website using Angular, deployed using AWS S3, CodePipeline, and CloudFront. Implemented a REST API using API Gateway to invoke Lambda functions that interact with DynamoDB and SNS. Displays & tracks when multiple people go to the gym, which is fully automated using Apple Shortcuts',
         },
         {
-          title: 'CvTitle',
-          description: 'Description',
+          title: 'WaggyTailz Organisational & Invoicing Program',
+          description: 'Automated a invoicing process by dynamically generating \& emailing Word documents out by querying a local database. Implemented processes to distribute jobs to the various employees. Jobs were distributed depending on weight and location of job, to ensure employees had an even weight of jobs, which resulted in the least amount of travel',
         },
       ]
     },
@@ -73,16 +75,16 @@ export class CvComponent {
       title: 'Leadership Experience',
       cvItems: [
         {
-          title: 'CvTitle',
-          location: 'Location',
-          duration: 'Duration',
-          bulletPoints: [{ title: 'point1' }, { title: 'point2' }]
+          title: 'Customer Assistant',
+          location: 'Morrisons',
+          duration: 'Mar 2020 - Jul 2020',
+          bulletPoints: [{ title: 'After quickly picking up the warehouse, checkout and grocery units I was tasked with training multiple staff' }]
         },
         {
-          title: 'CvTitle',
-          location: 'Location',
-          duration: 'Duration',
-          bulletPoints: [{ title: 'point1' }, { title: 'point2' }]
+          title: 'Mathematics Mentor',
+          location: 'The King\'s Grammar School Grantham',
+          duration: 'Sep 2018 - Mar 2020',
+          bulletPoints: [{ title: 'Mentored several under-performing students resulting in all of them achieving or exceding their target' }]
         },
       ]
     },
@@ -91,12 +93,11 @@ export class CvComponent {
       cvItems: [{
         bulletPoints: [
           {
-            title: 'Microsoft Certified: Azure Fundamentals',
+            title: 'AWS Certified Solutions Architect - Associate',
             modal: {
-              title: 'Microsoft Certified: Azure Fundamentals',
-              body: 'Displays foundational knowledge of Microsoft\'s cloud services. <br><br> Issued November 2022 with No Expiry. <br> Please click <a href="https://www.credly.com/badges/6885d399-0d39-4841-a559-2fb900d73826/public_url">here</a> to see credential.',
-              link: 'https://www.credly.com/badges/6885d399-0d39-4841-a559-2fb900d73826/public_url',
-              picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/AZ-900.png',
+              title: 'AWS Certified Solutions Architect - Associate',
+              body: 'Displays strong knowledge of Amazon\'s cloud services. Focuses on design of cost and performance optimised solutions. <br><br> Issued May 2023 with Expiry May 2026. <br> Please click <a href="">here</a> to see credential.',
+              picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/AWS-Solutions-Architect-Associate.png',
             },
           },
           {
@@ -108,30 +109,31 @@ export class CvComponent {
               picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/AWS-Certified-Cloud-Practitioner.png',
             },
           },
-          { 
-            title: 'AWS Certified Solutions Architect - Associate',
+          {
+            title: 'Microsoft Certified: Azure Fundamentals',
             modal: {
-              title: 'AWS Certified Solutions Architect - Associate',
-              body: 'Displays strong knowledge of Amazon\'s cloud services. Focuses on design of cost and performance optimised solutions. <br><br> Issued May 2023 with Expiry May 2026. <br> Please click <a href="">here</a> to see credential.',
-              picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/AWS-Solutions-Architect-Associate.png',
+              title: 'Microsoft Certified: Azure Fundamentals',
+              body: 'Displays foundational knowledge of Microsoft\'s cloud services. <br><br> Issued November 2022 with No Expiry. <br> Please click <a href="https://www.credly.com/badges/6885d399-0d39-4841-a559-2fb900d73826/public_url">here</a> to see credential.',
+              link: 'https://www.credly.com/badges/6885d399-0d39-4841-a559-2fb900d73826/public_url',
+              picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/AZ-900.png',
             },
           },
-          { 
+          {
+            title: 'YugabyteDB Fundamentals - Associate',
+            modal: {
+              title: 'YugabyteDB Fundamentals - Associate',
+              body: 'Demonstrates fundamental knowledge of the open source, high-performance distributed SQL database designed for cloud-native and horizontally scalable applications. <br><br> Issued October 2019 with No Expiry.',
+              picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/yb-dba-badge.png',
+            },
+          },
+          {
             title: 'Touch Typing qualification (KAZ - City & Guilds Assured)',
             modal: {
               title: 'Touch Typing qualification (KAZ - City & Guilds Assured)',
               body: 'Issued October 2019 with No Expiry. <br> Please click <a href="https://www.credly.com/badges/6c4e06d8-0281-4450-84d6-6f0de2542ac7/public_url">here</a> to see credential.',
               link: 'https://www.credly.com/badges/6c4e06d8-0281-4450-84d6-6f0de2542ac7/public_url',
               picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/kaz-touch-type-program.png',
-            }, 
-          },
-          { 
-            title: 'YugabyteDB Fundamentals - Associate',
-            modal: {
-              title: 'YugabyteDB Fundamentals - Associate',
-              body: 'Demonstrates fundamental knowledge of the open source, high-performance distributed SQL database designed for cloud-native and horizontally scalable applications. <br><br> Issued October 2019 with No Expiry.',
-              picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/yb-dba-badge.png',
-            }, 
+            },
           },
         ]
       }]

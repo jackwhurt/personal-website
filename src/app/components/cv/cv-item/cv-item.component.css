@@ -12,3 +12,7 @@ ul {
 .clickable:hover {
     color: #0356ae;
 }
+
+.multiline-text {
+    white-space: pre-line;
+}

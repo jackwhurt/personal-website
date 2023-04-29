@@ -7,7 +7,7 @@
         <p *ngIf="duration" class="float-end">{{ duration }}</p>
     </div>
 </div>
-<div *ngIf="description">
+<div class="multiline-text" *ngIf="description">
     <p>{{ description }}</p>
 </div>
 <div *ngIf="bulletPoints">
@@ -25,7 +25,7 @@
         </ng-container>
     </ul>
 </div>
-<div *ngIf="list">
+<div class="text-center" *ngIf="list">
     <ng-container *ngFor="let item of list; let i = index; let isLast = last">
         <p class="d-inline">{{ item }}<span *ngIf="!isLast"> | </span></p>
     </ng-container>
