@@ -13,9 +13,10 @@
 <div *ngIf="bulletPoints">
     <ul>
         <ng-container *ngFor="let bulletPoint of bulletPoints">
-            <li [attr.data-toggle]="'modal'" [attr.data-target]="'#modal-' + hash(bulletPoint.title)">
+            <li>
                 <div *ngIf="bulletPoint.modal">
-                    <p class="clickable">{{ bulletPoint.title }}</p>
+                    <p class="clickable" [attr.data-toggle]="'modal'"
+                        [attr.data-target]="'#modal-' + hash(bulletPoint.title)">{{ bulletPoint.title }}</p>
                     <app-cv-modal [id]="hash(bulletPoint.title)" [modalContent]="bulletPoint.modal"></app-cv-modal>
                 </div>
                 <div *ngIf="!bulletPoint.modal">

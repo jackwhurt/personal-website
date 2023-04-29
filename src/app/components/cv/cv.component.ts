@@ -7,6 +7,22 @@ import { CvSection } from 'src/app/interfaces/cv';
   styleUrls: ['./cv.component.css']
 })
 export class CvComponent {
+
+  downloadFile(): void {
+    const url = 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/JACK-HURT-SOFTWARE-ENGINEER-CV.pdf';
+    const fileName = 'JACK-HURT-SOFTWARE-ENGINEER-CV.pdf';
+
+    fetch(url)
+      .then(response => response.blob())
+      .then(blob => {
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = fileName;
+        link.click();
+        URL.revokeObjectURL(link.href);
+      });
+  }
+
   cvSections: CvSection[] = [
     {
       title: 'Skills',

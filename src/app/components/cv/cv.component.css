@@ -2,6 +2,13 @@
     margin-top: 20px;
 }
 
-.no-underline {
+.clickable {
+    cursor: pointer;
+    color: #007bff;
+    transition: color 0.3s;
     text-decoration: none;
+}
+
+.clickable:hover {
+    color: #0356ae;
 }
