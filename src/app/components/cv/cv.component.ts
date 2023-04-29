@@ -66,6 +66,7 @@ export class CvComponent {
         {
           title: 'BSc Mathematics and Computer Science',
           location: 'University of Birmingham',
+          locationLink: 'https://www.birmingham.ac.uk/index.aspx',
           duration: '2020 - 2024',
           bulletPoints: [{ title: 'Achieved 1:1 in First & Second Year with highlights of 92 in Object Oriented Programming and 89 in Systems Programming in C/C++' }]
         },
