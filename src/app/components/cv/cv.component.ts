@@ -63,14 +63,24 @@ export class CvComponent {
       cvItems: [
         {
           title: 'BSc Mathematics and Computer Science',
-          description: 'Achieved 1:1 in First & Second Year with highlights of 92 in Object Oriented Programming and 89 in Systems Programming in C/C++',
           location: 'University of Birmingham',
           duration: '2020 - 2024',
+          bulletPoints: [{ title: 'Achieved 1:1 in First & Second Year with highlights of 92 in Object Oriented Programming and 89 in Systems Programming in C/C++' }]
         },
         {
           title: 'The King\'s Grammar School Grantham',
-          description: 'A-Level: A*A*AA in Mathematics, Computer Science, Physics, & Further Mathematics (AS) respectively \n GCSE: 10 passes including five at Grade 9 \n Awarded The ACI Trophy for Outstanding Achievements in IT and The Newton Award',
           duration: '2013 - 2020',
+          bulletPoints: [
+            { title: 'A-Level: A*A*AA in Mathematics, Computer Science, Physics, & Further Mathematics (AS) respectively' },
+            {
+              title: 'GCSE: 10 passes including five at Grade 9',
+              dropdown: {
+                title: 'GCSE Grades (2013 - 2018)',
+                body: 'Displays strong knowledge of Amazon\'s cloud services. Focuses on design of cost and performance optimised solutions.',
+              },
+            },
+            { title: 'Awarded The ACI Trophy for Outstanding Achievements in IT and The Newton Award' },
+          ]
         }
       ]
     },

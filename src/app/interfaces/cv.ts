@@ -10,9 +10,15 @@ export interface ModalContent {
     picture?: string;
 }
 
+export interface DropdownContent {
+    title: string;
+    body?: string;
+}
+
 export interface Point {
     title: string;
     modal?: ModalContent;
+    dropdown?: DropdownContent;
 }
 
 export interface CvItem {

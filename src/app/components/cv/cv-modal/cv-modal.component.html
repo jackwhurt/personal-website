@@ -5,15 +5,18 @@
                 <h5 class="modal-title">{{ modalContent?.title }}</h5>
                 <button type="button" class="btn-close" aria-label="Close" data-dismiss="modal"></button>
             </div>
-            <div *ngIf="modalContent?.body || modalContent?.link || modalContent?.picture" class="modal-body">
+            <div *ngIf="modalContent?.body && modalContent?.picture" class="modal-body">
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-md-4 d-flex justify-content-center">
                         <a href="{{ modalContent?.link }}">
                             <img class="modal-image" src="{{ modalContent?.picture }}">
                         </a>
                     </div>
-                    <div [innerHTML]="modalContent?.body" class="col-8"></div>
+                    <div [innerHTML]="modalContent?.body" class="col-md-8 text-md-start text-center"></div>
                 </div>
+            </div>
+            <div *ngIf="!modalContent?.picture" class="modal-body">
+                <div class="text-md-start text-center" [innerHTML]="modalContent?.body"></div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>

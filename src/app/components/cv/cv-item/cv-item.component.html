@@ -1,10 +1,11 @@
 <div class="row">
     <div class="col-sm-8">
-        <p *ngIf="title" class="d-inline-block fw-bold">{{ title }}</p>
-        <p *ngIf="location" class="d-inline-block">, {{ location }}</p>
+        <p *ngIf="title && !location" class="d-inline-block fw-bold">{{ title }}</p>
+        <p *ngIf="title && location" class="d-inline-block fw-bold">{{ title }},&nbsp;</p>
+        <p *ngIf="location" class="d-inline-block">{{ location }}</p>
     </div>
     <div class="col-sm-4">
-        <p *ngIf="duration" class="float-end">{{ duration }}</p>
+        <p *ngIf="duration" class="float-end"> {{ duration }}</p>
     </div>
 </div>
 <div class="multiline-text" *ngIf="description">
@@ -19,7 +20,19 @@
                         [attr.data-target]="'#modal-' + hash(bulletPoint.title)">{{ bulletPoint.title }}</p>
                     <app-cv-modal [id]="hash(bulletPoint.title)" [modalContent]="bulletPoint.modal"></app-cv-modal>
                 </div>
-                <div *ngIf="!bulletPoint.modal">
+                <div *ngIf="bulletPoint.dropdown">
+                    <p class="d-inline" (click)="toggleExpand(bulletPoint.dropdown.title)">
+                        {{ bulletPoint.dropdown.title }}
+                        <i class="bi bi-chevron-down ms-2"
+                            [class.bi-chevron-up]="isExpanded(bulletPoint.dropdown.title)"></i>
+                    </p>
+                    <div [@expandCollapse]="isExpanded(bulletPoint.dropdown.title) ? 'expanded' : 'collapsed'">
+                        <p [style.display]="isExpanded ? 'block' : 'none'" [@scrollIn]>
+                            This is the additional text that will be shown when the text above is clicked.
+                        </p>
+                    </div>
+                </div>
+                <div *ngIf="!bulletPoint.modal && !bulletPoint.dropdown">
                     <p>{{ bulletPoint.title }}</p>
                 </div>
             </li>
