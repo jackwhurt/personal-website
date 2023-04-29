@@ -94,16 +94,45 @@ export class CvComponent {
             title: 'Microsoft Certified: Azure Fundamentals',
             modal: {
               title: 'Microsoft Certified: Azure Fundamentals',
+              body: 'Displays foundational knowledge of Microsoft\'s cloud services. <br><br> Issued November 2022 with No Expiry. <br> Please click <a href="https://www.credly.com/badges/6885d399-0d39-4841-a559-2fb900d73826/public_url">here</a> to see credential.',
+              link: 'https://www.credly.com/badges/6885d399-0d39-4841-a559-2fb900d73826/public_url',
+              picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/AZ-900.png',
             },
           },
           {
             title: 'AWS Certified Cloud Practitioner',
             modal: {
-              body: 'Easiest AWS Cert',
+              title: 'AWS Certified Cloud Practitioner',
+              body: 'Displays foundational knowledge of Amazon\'s cloud services. <br><br> Issued October 2022 with Expiry October 2025. <br> Please click <a href="https://www.credly.com/badges/652c6861-913b-438f-9207-3afab3470178/public_url">here</a> to see credential.',
+              link: 'https://www.credly.com/badges/652c6861-913b-438f-9207-3afab3470178/public_url',
+              picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/AWS-Certified-Cloud-Practitioner.png',
             },
           },
-          { title: 'AWS Certified Solutions Architect - Associate' },
-          { title: 'Touch Typing qualification (KAZ - City & Guilds Assured)' },
+          { 
+            title: 'AWS Certified Solutions Architect - Associate',
+            modal: {
+              title: 'AWS Certified Solutions Architect - Associate',
+              body: 'Displays strong knowledge of Amazon\'s cloud services. Focuses on design of cost and performance optimised solutions. <br><br> Issued May 2023 with Expiry May 2026. <br> Please click <a href="">here</a> to see credential.',
+              picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/AWS-Solutions-Architect-Associate.png',
+            },
+          },
+          { 
+            title: 'Touch Typing qualification (KAZ - City & Guilds Assured)',
+            modal: {
+              title: 'Touch Typing qualification (KAZ - City & Guilds Assured)',
+              body: 'Issued October 2019 with No Expiry. <br> Please click <a href="https://www.credly.com/badges/6c4e06d8-0281-4450-84d6-6f0de2542ac7/public_url">here</a> to see credential.',
+              link: 'https://www.credly.com/badges/6c4e06d8-0281-4450-84d6-6f0de2542ac7/public_url',
+              picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/kaz-touch-type-program.png',
+            }, 
+          },
+          { 
+            title: 'YugabyteDB Fundamentals - Associate',
+            modal: {
+              title: 'YugabyteDB Fundamentals - Associate',
+              body: 'Demonstrates fundamental knowledge of the open source, high-performance distributed SQL database designed for cloud-native and horizontally scalable applications. <br><br> Issued October 2019 with No Expiry.',
+              picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/yb-dba-badge.png',
+            }, 
+          },
         ]
       }]
     }
