@@ -7,9 +7,15 @@ ul {
     cursor: pointer;
     color: #007bff;
     transition: color 0.3s;
+    text-decoration: none;
 }
 
-.clickable:hover {
+.bi-chevron-down {
+    color: #007bff;
+}
+
+.clickable:hover,
+.bi-chevron-down:hover {
     color: #0356ae;
 }
 

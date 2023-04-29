@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { Point } from 'src/app/interfaces/cv';
+import { CvItem, Point } from 'src/app/interfaces/cv';
 import { CvModalComponent } from '../cv-modal/cv-modal.component';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
@@ -21,19 +21,14 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   ],
 })
 export class CvItemComponent implements OnInit {
-  @Input() title?: string;
-  @Input() location?: string;
-  @Input() duration?: string;
-  @Input() description?: string;
-  @Input() bulletPoints?: Point[];
-  @Input() list?: string[];
+  @Input() cvItem!: CvItem;
   @ViewChild('cvModal') cvModalComponent!: CvModalComponent;
   myTogglesExpand = new Map<number, boolean>();
 
   ngOnInit(): void {
-    this.bulletPoints?.forEach((bulletPoint) => {
+    this.cvItem.bulletPoints?.forEach((bulletPoint) => {
       if (bulletPoint.dropdown) {
-        const uniqueHash = this.hash(bulletPoint.dropdown.title);
+        const uniqueHash = this.hash(bulletPoint.title);
         this.myTogglesExpand.set(uniqueHash, false);
       }
     });

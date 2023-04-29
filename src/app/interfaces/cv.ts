@@ -11,7 +11,6 @@ export interface ModalContent {
 }
 
 export interface DropdownContent {
-    title: string;
     body: string;
 }
 
@@ -24,6 +23,7 @@ export interface Point {
 export interface CvItem {
     title?: string;
     location?: string;
+    locationLink?: string;
     duration?: string;
     description?: string;
     bulletPoints?: Point[];

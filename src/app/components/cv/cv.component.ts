@@ -38,6 +38,7 @@ export class CvComponent {
         {
           title: 'Trainee Software Engineer',
           location: 'Kainos',
+          locationLink: 'https://www.kainos.com',
           duration: 'Aug 2022 - Aug 2023',
           bulletPoints: [
             { title: 'Currently developing a web-app using Angular to digitalise a multitude of workflows within hospitals' },
@@ -49,6 +50,7 @@ export class CvComponent {
         {
           title: 'Intern Software Developer',
           location: 'BigSpark',
+          locationLink: 'https://bigspark.dev',
           duration: 'Jun 2021 - Aug 2021',
           bulletPoints: [
             { title: 'Designed a wrapper web application for Amazon Deequ using Java, Javascript, Springboot, React & AWS' },
@@ -71,11 +73,15 @@ export class CvComponent {
           title: 'The King\'s Grammar School Grantham',
           duration: '2013 - 2020',
           bulletPoints: [
-            { title: 'A-Level: A*A*AA in Mathematics, Computer Science, Physics, & Further Mathematics (AS) respectively' },
-            {
-              title: 'GCSE: 10 passes including five at Grade 9',
+            { 
+              title: 'A-Level: A*A*AA',
               dropdown: {
-                title: 'GCSE Grades (2013 - 2018)',
+                body: 'A* in Mathematics, Computer Science & Further Maths (AS) \n A in Physics',
+              },
+            },
+            {
+              title: 'GCSE: Five 9s, Two 6s & Three 5s',
+              dropdown: {
                 body: 'Grade 9 in Mathematics, Computer Science, Physics, Chemistry, Biology \n Grade 6 in German & Geography \n Grade 5 in History, English Lit & English Lan',
               },
             },

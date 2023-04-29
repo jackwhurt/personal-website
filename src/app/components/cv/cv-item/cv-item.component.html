@@ -1,19 +1,21 @@
 <div class="row">
     <div class="col-sm-8">
-        <p *ngIf="title && !location" class="d-inline-block fw-bold">{{ title }}</p>
-        <p *ngIf="title && location" class="d-inline-block fw-bold">{{ title }},&nbsp;</p>
-        <p *ngIf="location" class="d-inline-block">{{ location }}</p>
+        <p *ngIf="cvItem.title && !cvItem.location" class="d-inline-block fw-bold">{{ cvItem.title }}</p>
+        <p *ngIf="cvItem.title && cvItem.location" class="d-inline-block fw-bold">{{ cvItem.title }},&nbsp;</p>
+        <p *ngIf="cvItem.location && !cvItem.locationLink" class="d-inline-block">{{ cvItem.location }}</p>
+        <p *ngIf="cvItem.location && cvItem.locationLink" class="d-inline-block"><a class="clickable"
+                href="{{ cvItem.locationLink }}" target="_blank">{{ cvItem.location }}</a></p>
     </div>
     <div class="col-sm-4">
-        <p *ngIf="duration" class="float-end"> {{ duration }}</p>
+        <p *ngIf="cvItem.duration" class="float-end"> {{ cvItem.duration }}</p>
     </div>
 </div>
-<div class="multiline-text" *ngIf="description">
-    <p>{{ description }}</p>
+<div class="multiline-text" *ngIf="cvItem.description">
+    <p>{{ cvItem.description }}</p>
 </div>
-<div *ngIf="bulletPoints">
+<div *ngIf="cvItem.bulletPoints">
     <ul>
-        <ng-container *ngFor="let bulletPoint of bulletPoints">
+        <ng-container *ngFor="let bulletPoint of cvItem.bulletPoints">
             <li>
                 <div *ngIf="bulletPoint.modal">
                     <p class="clickable" [attr.data-toggle]="'modal'"
@@ -21,13 +23,15 @@
                     <app-cv-modal [id]="hash(bulletPoint.title)" [modalContent]="bulletPoint.modal"></app-cv-modal>
                 </div>
                 <div *ngIf="bulletPoint.dropdown">
-                    <p class="d-inline" (click)="toggleExpand(bulletPoint.dropdown.title)">
-                        {{ bulletPoint.dropdown.title }}
+                    <p class="d-inline" (click)="toggleExpand(bulletPoint.title)">
+                        {{ bulletPoint.title }}
                         <i class="bi bi-chevron-down ms-2"
-                            [class.bi-chevron-up]="isExpanded(bulletPoint.dropdown.title)"></i>
+                            [class.bi-chevron-up]="isExpanded(bulletPoint.title)"></i>
                     </p>
-                    <div [@expandCollapse]="isExpanded(bulletPoint.dropdown.title) ? 'expanded' : 'collapsed'" class="overflow-hidden">
-                        <p class="multiline-text smaller-font ps-2" [style.display]="isExpanded ? 'block' : 'none'" [@scrollIn]>
+                    <div [@expandCollapse]="isExpanded(bulletPoint.title) ? 'expanded' : 'collapsed'"
+                        class="overflow-hidden">
+                        <p class="multiline-text smaller-font ps-2" [style.display]="isExpanded ? 'block' : 'none'"
+                            [@scrollIn]>
                             {{ bulletPoint.dropdown.body }}
                         </p>
                     </div>
@@ -39,8 +43,8 @@
         </ng-container>
     </ul>
 </div>
-<div class="text-center" *ngIf="list">
-    <ng-container *ngFor="let item of list; let i = index; let isLast = last">
+<div class="text-center" *ngIf="cvItem.list">
+    <ng-container *ngFor="let item of cvItem.list; let i = index; let isLast = last">
         <p class="d-inline">{{ item }}<span *ngIf="!isLast"> | </span></p>
     </ng-container>
 </div>
