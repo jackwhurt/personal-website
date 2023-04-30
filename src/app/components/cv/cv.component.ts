@@ -124,7 +124,7 @@ export class CvComponent {
           duration: 'Mar 2020 - Jul 2020',
           bulletPoints: [
             { title: 'After quickly picking up the warehouse, checkout and grocery units I was tasked with training multiple staff' },
-            { title: 'Led to one new warehouse ' },
+            { title: 'Led to one employee being hired as a well needed full-time warehouse manager' },
           ]
         },
         {
