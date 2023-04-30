@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { CvItem, Point } from 'src/app/interfaces/cv';
+import { CvItem } from 'src/app/interfaces/cv';
 import { CvModalComponent } from '../cv-modal/cv-modal.component';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 

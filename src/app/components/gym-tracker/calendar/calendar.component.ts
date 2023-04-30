@@ -1,43 +1,9 @@
 import { Component, ChangeDetectionStrategy, ViewChild, TemplateRef, OnInit, Output, EventEmitter } from '@angular/core';
-import { isSameDay, isSameMonth, startOfDay, subDays, } from 'date-fns';
+import { isSameDay, isSameMonth } from 'date-fns';
 import { Subject } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { CalendarEvent, CalendarEventTimesChangedEvent, CalendarView } from 'angular-calendar';
-import { CalendarEventService } from 'src/app/services/calendar-event.service';
-// TODO: Delete
-// const colors: Record<string, EventColor> = {
-//   red: {
-//     primary: '#ad2121',
-//     secondary: '#FAE3E3',
-//   },
-//   blue: {
-//     primary: '#1e90ff',
-//     secondary: '#D1E8FF',
-//   },
-//   yellow: {
-//     primary: '#e3bc08',
-//     secondary: '#FDF1BA',
-//   },
-//   purple: {
-//     primary: '#9114b8',
-//     secondary: '#9114b8',
-//   },
-//   green: {
-//     primary: '#17b814',
-//     secondary: '#17b814',
-//   },
-// };
-// const event2: CalendarEvent = {
-//   start: subDays(startOfDay(new Date()), 1),
-//   title: 'A 3 day event',
-//   color: { ...colors['red'] },
-//   allDay: true,
-//   resizable: {
-//     beforeStart: true,
-//     afterEnd: true,
-//   },
-//   draggable: true,
-// };
+import { CalendarEventService } from 'src/app/services/calender-event/calendar-event.service';
 
 @Component({
   selector: 'app-calendar',
@@ -62,7 +28,7 @@ export class CalendarComponent implements OnInit {
 
   activeDayIsOpen: boolean = true;
 
-  constructor(private modal: NgbModal, private calendarEventService: CalendarEventService) { }
+  constructor(private calendarEventService: CalendarEventService) { }
 
   ngOnInit() {
     this.loadEvents(new Date());
