@@ -41,9 +41,9 @@ export class CvComponent {
           locationLink: 'https://www.kainos.com',
           duration: 'Aug 2022 - Aug 2023',
           bulletPoints: [
-            { title: 'Currently developing a web-app using Angular to digitalise a multitude of workflows within hospitals' },
+            { title: 'Developed a web-app using Angular to digitalise a multitude of workflows within hospitals' },
             { title: 'Led original initiative to raise unit test coverage, resulting in coverage doubling' },
-            { title: 'Mentoring the apprentice with efforts such as pair programming sessions and weekly catch-up calls' },
+            { title: 'Mentored the apprentice with efforts such as pair programming sessions and weekly catch-up calls ' },
             { title: 'Part of a 7 week training academy which covered topics such as: full-stack development, REST APIs, databases, functional & non-functional testing, quality code and agile methodologies' },
           ]
         },
@@ -68,13 +68,22 @@ export class CvComponent {
           location: 'University of Birmingham',
           locationLink: 'https://www.birmingham.ac.uk/index.aspx',
           duration: '2020 - 2024',
-          bulletPoints: [{ title: 'Achieved 1:1 in First & Second Year with highlights of 92 in Object Oriented Programming and 89 in Systems Programming in C/C++' }]
+          bulletPoints: [
+            { 
+              title: 'Achieved 1:1 in First & Second Year with highlights of 92 in Object Oriented Programming and 89 in Systems Programming in C/C++',
+              dropdown: {
+                body: 'First Year Modules: Real Analysis; Vectors, Geometry & Linear Algebra; Mechanics; Statistics; Object Oriented Programming; Data Structures & Algorithms; Theory of Computation\n'
+                + 'Second Year Modules: Algebra & Combinatorics; Real & Complex Analysis; Differential Equations; Systems Programming in C/C++; Functional Programming; Security & Networks\n' 
+                + 'Third Year Modules: Linear Algebra & Linear Programming; Multivariable & Vector Analysis; Advanced Functional Programming; Algorithms & Complexity; Computer Science Project',
+              },
+            }
+          ]
         },
         {
           title: 'The King\'s Grammar School Grantham',
           duration: '2013 - 2020',
           bulletPoints: [
-            { 
+            {
               title: 'A-Level: A*A*AA',
               dropdown: {
                 body: 'A* in Mathematics, Computer Science & Further Maths (AS) \n A in Physics',
@@ -111,7 +120,10 @@ export class CvComponent {
           title: 'Customer Assistant',
           location: 'Morrisons',
           duration: 'Mar 2020 - Jul 2020',
-          bulletPoints: [{ title: 'After quickly picking up the warehouse, checkout and grocery units I was tasked with training multiple staff' }]
+          bulletPoints: [
+            { title: 'After quickly picking up the warehouse, checkout and grocery units I was tasked with training multiple staff' },
+            { title: 'Led to one new warehouse ' },
+          ]
         },
         {
           title: 'Mathematics Mentor',

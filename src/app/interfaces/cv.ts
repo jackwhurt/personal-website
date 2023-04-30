@@ -1,8 +1,3 @@
-export interface CvSection {
-    title: string;
-    cvItems: CvItem[];
-}
-
 export interface ModalContent {
     title?: string;
     body?: string;
@@ -28,4 +23,9 @@ export interface CvItem {
     description?: string;
     bulletPoints?: Point[];
     list?: string[];
+}
+
+export interface CvSection {
+    title: string;
+    cvItems: CvItem[];
 }
