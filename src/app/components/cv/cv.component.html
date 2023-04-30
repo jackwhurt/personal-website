@@ -1,0 +1,28 @@
+<div class="cv-container">
+    <div class="text-center">
+        <h2> Interactive CV </h2>
+        <a href="https://www.linkedin.com/in/jackwhurt/"><span class="bi bi-linkedin mx-2"></span></a>
+        <a href="https://github.com/jackwhurt"><span class="bi bi-github mx-2"></span></a>
+        <a href="mailto:jackwhurt@gmail.com"><span class="bi bi-envelope-fill mx-2"></span></a>
+    </div>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10">
+            <div *ngFor="let cvSection of cvSections">
+                <app-cv-section [title]="cvSection.title"></app-cv-section>
+                <div *ngFor="let cvItem of cvSection.cvItems">
+                    <app-cv-item [cvItem]="cvItem"></app-cv-item>
+                </div>
+            </div>
+            <br>
+            <br>
+            <p class="text-center">
+                Download the pdf version
+                <a class="clickable" (click)="downloadFile()">
+                    here <span class="bi bi-download padding"></span>
+                </a>
+            </p>
+        </div>
+        <div class="col-1"></div>
+    </div>
+</div>

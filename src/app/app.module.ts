@@ -18,6 +18,10 @@ import { CalendarComponent } from './components/calendar/calendar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { PodiumComponent } from './components/podium/podium.component';
+import { CvComponent } from './components/cv/cv.component';
+import { CvItemComponent } from './components/cv/cv-item/cv-item.component';
+import { CvSectionComponent } from './components/cv/cv-section/cv-section.component';
+import { CvModalComponent } from './components/cv/cv-modal/cv-modal.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +33,10 @@ import { PodiumComponent } from './components/podium/podium.component';
     CalendarComponent,
     PageNotFoundComponent,
     PodiumComponent,
+    CvComponent,
+    CvItemComponent,
+    CvSectionComponent,
+    CvModalComponent,
   ],
   imports: [
     BrowserModule,
