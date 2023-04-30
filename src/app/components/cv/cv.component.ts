@@ -42,9 +42,9 @@ export class CvComponent {
           duration: 'Aug 2022 - Aug 2023',
           bulletPoints: [
             { title: 'Developed a web-app using Angular to digitalise a multitude of workflows within hospitals' },
-            { title: 'Led original initiative to raise unit test coverage, resulting in coverage doubling' },
-            { title: 'Mentored the apprentice with efforts such as pair programming sessions and weekly catch-up calls ' },
-            { title: 'Part of a 7 week training academy which covered topics such as: full-stack development, REST APIs, databases, functional & non-functional testing, quality code and agile methodologies' },
+            { title: 'Led the original initiative to raise unit test coverage, resulting in the coverage doubling' },
+            { title: 'Mentored the apprentice with efforts such as pair programming sessions & weekly catch-up calls ' },
+            { title: 'Part of a 7 week training academy which covered topics such as: full-stack development, REST APIs, databases, functional & non-functional testing, quality code & agile methodologies' },
           ]
         },
         {
@@ -54,8 +54,8 @@ export class CvComponent {
           duration: 'Jun 2021 - Aug 2021',
           bulletPoints: [
             { title: 'Designed a wrapper web application for Amazon Deequ using Java, Javascript, Springboot, React & AWS' },
-            { title: 'Led the development of the REST API that was dockerized and hosted in EC2, which I eventually moved to spot instances to cut costs by 55%' },
-            { title: 'Presented and demoed my work on the company wide fortnightly calls' },
+            { title: 'Led the development of the REST API that was dockerized & hosted in EC2, which I eventually moved to spot instances that cut costs by 55%' },
+            { title: 'Presented & demoed my work on the company wide fortnightly calls' },
           ]
         }
       ]
@@ -64,13 +64,13 @@ export class CvComponent {
       title: 'Education',
       cvItems: [
         {
-          title: 'BSc Mathematics and Computer Science',
+          title: 'BSc Mathematics & Computer Science',
           location: 'University of Birmingham',
           locationLink: 'https://www.birmingham.ac.uk/index.aspx',
           duration: '2020 - 2024',
           bulletPoints: [
             { 
-              title: 'Achieved 1:1 in First & Second Year with highlights of 92 in Object Oriented Programming and 89 in Systems Programming in C/C++',
+              title: 'Achieved 1:1 in First & Second Year with highlights of 92 in Object Oriented Programming & 89 in Systems Programming in C/C++',
               dropdown: {
                 body: 'First Year Modules: Real Analysis; Vectors, Geometry & Linear Algebra; Mechanics; Statistics; Object Oriented Programming; Data Structures & Algorithms; Theory of Computation\n'
                 + 'Second Year Modules: Algebra & Combinatorics; Real & Complex Analysis; Differential Equations; Systems Programming in C/C++; Functional Programming; Security & Networks\n' 
@@ -86,16 +86,16 @@ export class CvComponent {
             {
               title: 'A-Level: A*A*AA',
               dropdown: {
-                body: 'A* in Mathematics, Computer Science & Further Maths (AS) \n A in Physics',
+                body: 'A* in Mathematics & Computer Science \n A in Physics & Further Maths (AS)',
               },
             },
             {
               title: 'GCSE: Five 9s, Two 6s & Three 5s',
               dropdown: {
-                body: 'Grade 9 in Mathematics, Computer Science, Physics, Chemistry, Biology \n Grade 6 in German & Geography \n Grade 5 in History, English Lit & English Lan',
+                body: 'Grade 9 in Mathematics, Computer Science, Physics, Chemistry, Biology \n Grade 6 in German & Geography \n Grade 5 in History, English Litrature & English Language',
               },
             },
-            { title: 'Awarded The ACI Trophy for Outstanding Achievements in IT and The Newton Award' },
+            { title: 'Awarded The ACI Trophy for Outstanding Achievements in IT & The Newton Award' },
           ]
         }
       ]
@@ -107,11 +107,11 @@ export class CvComponent {
           title: 'Personal Website',
           location: 'GitHub Repo',
           locationLink: 'https://github.com/jackwhurt/personal-website',
-          description: 'Developed a personal website using Angular, deployed using AWS S3, CodePipeline, and CloudFront. Implemented a REST API using API Gateway to invoke Lambda functions that interact with DynamoDB and SNS. Displays & tracks when multiple people go to the gym, which is fully automated using Apple Shortcuts',
+          description: 'Developed a personal website using Angular, deployed using AWS S3, CodePipeline, & CloudFront. Implemented a REST API using API Gateway to invoke Lambda functions that interact with DynamoDB & SNS. Displays & tracks when multiple people go to the gym, which is fully automated using Apple Shortcuts',
         },
         {
           title: 'WaggyTailz Organisational & Invoicing Program',
-          description: 'Automated a invoicing process by dynamically generating \& emailing Word documents out by querying a local database. Implemented processes to distribute jobs to the various employees. Jobs were distributed depending on weight and location of job, to ensure employees had an even weight of jobs, which resulted in the least amount of travel',
+          description: 'Automated an invoicing process by dynamically generating & emailing Word documents out by querying a local database. Implemented processes to distribute jobs to the various employees. Jobs were distributed depending on weight & location of job, to ensure employees had an even weight of jobs, which resulted in the least amount of travel',
         },
       ]
     },
@@ -123,7 +123,7 @@ export class CvComponent {
           location: 'Morrisons',
           duration: 'Mar 2020 - Jul 2020',
           bulletPoints: [
-            { title: 'After quickly picking up the warehouse, checkout and grocery units I was tasked with training multiple staff' },
+            { title: 'After quickly picking up the warehouse, checkout & grocery units I was tasked with training multiple staff' },
             { title: 'Led to one employee being hired as a well needed full-time warehouse manager' },
           ]
         },
@@ -131,7 +131,7 @@ export class CvComponent {
           title: 'Mathematics Mentor',
           location: 'The King\'s Grammar School Grantham',
           duration: 'Sep 2018 - Mar 2020',
-          bulletPoints: [{ title: 'Mentored several under-performing students resulting in all of them achieving or exceding their target' }]
+          bulletPoints: [{ title: 'Mentored several under-performing students, which resulted in all of them achieving or exceding their targets' }]
         },
       ]
     },
@@ -143,7 +143,7 @@ export class CvComponent {
             title: 'AWS Certified Solutions Architect - Associate',
             modal: {
               title: 'AWS Certified Solutions Architect - Associate',
-              body: 'Displays strong knowledge of Amazon\'s cloud services. Focuses on design of cost and performance optimised solutions. <br><br> Issued May 2023 with Expiry May 2026. <br> Please click <a href="">here</a> to see credential.',
+              body: 'Displays strong knowledge of Amazon\'s cloud services. Focuses on design of cost & performance optimised solutions. <br><br> Issued May 2023 with Expiry May 2026. <br> Please click <a href="">here</a> to see credential.',
               picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/AWS-Solutions-Architect-Associate.png',
             },
           },
@@ -169,7 +169,7 @@ export class CvComponent {
             title: 'YugabyteDB Fundamentals - Associate',
             modal: {
               title: 'YugabyteDB Fundamentals - Associate',
-              body: 'Demonstrates fundamental knowledge of the open source, high-performance distributed SQL database designed for cloud-native and horizontally scalable applications. <br><br> Issued October 2019 with No Expiry.',
+              body: 'Demonstrates fundamental knowledge of the open source, high-performance distributed SQL database designed for cloud-native & horizontally scalable applications. <br><br> Issued October 2019 with No Expiry.',
               picture: 'https://s3.eu-west-2.amazonaws.com/jackwhurt.com.assets/yb-dba-badge.png',
             },
           },
