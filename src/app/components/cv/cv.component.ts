@@ -10,7 +10,7 @@ import { AssetsService } from 'src/app/services/assets-service/assets.service';
 export class CvComponent implements OnInit {
   cvSections: CvSection[] = []
 
-  constructor(private assetsService: AssetsService, private changeDetector: ChangeDetectorRef) {}
+  constructor(private assetsService: AssetsService) {}
 
   ngOnInit(): void {
     this.assetsService.getCvContent().subscribe({
