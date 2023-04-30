@@ -105,6 +105,8 @@ export class CvComponent {
       cvItems: [
         {
           title: 'Personal Website',
+          location: 'GitHub Repo',
+          locationLink: 'https://github.com/jackwhurt/personal-website',
           description: 'Developed a personal website using Angular, deployed using AWS S3, CodePipeline, and CloudFront. Implemented a REST API using API Gateway to invoke Lambda functions that interact with DynamoDB and SNS. Displays & tracks when multiple people go to the gym, which is fully automated using Apple Shortcuts',
         },
         {
