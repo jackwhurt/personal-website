@@ -1,5 +1,23 @@
 # PersonalWebsite
 
+## Setting up Shortcut
+
+Message Jack for a copy of the shortcut and perform the following steps.
+
+- Open the link and add the shortcut
+- Open settings on your iPhone
+- Nagivate to Focus and add the fitness focus
+- Go into the fitness focus settings and add a schedule
+- Add the location of your gym and decrease the radius to 50m
+- Head to shortcuts app and click the automation section 
+- Add automation and create personal automation
+- Scroll down to fitness focus and select when turning on
+- Add the open shortcut action 
+- Select the create gym event shortcut
+- Either select or deselect ask before running depending on your preference
+
+<strong> Please note the first time you run the shortcut you will be asked to select a colour and enter your name </strong>
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
 
 ## Development server
