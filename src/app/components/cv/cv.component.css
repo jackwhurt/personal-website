@@ -12,3 +12,8 @@
 .clickable:hover {
     color: #0356ae;
 }
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
